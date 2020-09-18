@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import "./variables";
+
+.zen-container {
+  ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  width: 265px;
+  position: fixed;
+  height: 100%;
+  background-color: $menu-container-bg;
+  transition: all 0.3s;
+
+  .zen-menu-header {
+    background-color: $menu-container-bg-dark;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px;
+
+    .zen-brand {
+      .zen-menu-title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    .zen-tools {
+      margin: 0px 0px 0px auto;
+      padding: 10px;
+      transition: transform 0.3s ease-in-out;
+      transform: rotate(0deg);
+    }
+  }
+
+  .zen-navigation-container {
+    margin-top: 25px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+
+    .zen-category {
+      .zen-category-header {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin: 20px 0 0 0;
+        padding: 0 25px;
+        font-size: 0.8rem;
+        color: $zen-category-header;
+        min-height: 40px;
+
+        .zen-menu-header-icon {
+          min-width: 20px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .zen-category-content {
+        width: inherit;
+
+        .zen-menu-item {
+          cursor: pointer;
+          font-size: 0.8rem;
+          padding: 0 25px;
+          min-height: 40px;
+          width: inherit;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: $zen-label-color-inactive;
+
+          .zen-menu-item-icon {
+            min-width: 20px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .zen-menu-item-label {
+            padding-left: 10px;
+            width: fit-content;
+          }
+
+          .zen-menu-item-arrow {
+            margin: 0px 0px 0px auto;
+            font-size: 0.55rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.partial-sidebar {
+  transition: width 0.3s;
+  width: 70px;
+}
+
+.hidden {
+  display: none !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.rotate-180 {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-180deg) !important;
+}
+
+.invisible {
+  width: 0px !important;
+  overflow: hidden;
+  transition: all 0.3s;
+  min-width: 0px !important;
+}
+
+.zen-hoverable {
+  width: inherit;
+
+  :hover {
+    color: $zen-label-color-active !important;
+    background-color: $menu-container-bg-dark !important;
+  }
+}
+
+.simplebar-scrollbar:before {
+  width: 4px;
+  background: #637099 !important;
+}
+
+.partial-sidebar {
+  .zen-category-content > ul {
+    display: none;
+  }
+}
+
+.rotate-0-deg {
+  transform: rotate(0deg);
+}
+
+.rotate-90-deg {
+  transform: rotate(90deg);
+}
+
+.slideUp {
+  // display: none;
+  height: 0 !important;
+  transition: all 0.3s !important;
+}
+
+.inner {
+  overflow: hidden;
+  height: 0 !important;
+  transition: all 0.3s !important;
+}
+
+.show-menu {
+  height: auto !important;
+  transition: all 0.3s !important;
+}

@@ -1,0 +1,54 @@
+.zen-list-item-container {
+  font-size: 12px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  background-color: white;
+  border: 1px grey;
+  border-radius: 3px;
+  padding: 4px 0px;
+  margin-top: 2px;
+  z-index: 99999;
+
+  .zen-list-item {
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .zen-flag-label {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+
+    .zen-flag-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      background-color: rgb(224, 224, 224);
+    }
+  }
+}
+
+.zen-list-selected-item {
+  display: flex;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+
+  .zen-list-selected-item-label {
+    margin-left: 5px;
+  }
+
+  .zen-list-chevron {
+    margin-left: 5px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+}

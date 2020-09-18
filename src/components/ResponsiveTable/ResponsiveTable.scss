@@ -1,0 +1,21 @@
+.responsive-table-container {
+    margin: 20px;
+    // white-space: nowrap;
+    overflow: auto;
+
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    tr {
+        border: 1px solid black;
+    }
+
+    td,
+    th {
+        padding: 5px 8px;
+        border: 1px solid black;
+    }
+}

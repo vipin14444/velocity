@@ -1,0 +1,77 @@
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.hover__container {
+    padding: 20px;
+    background-color: #04132a;
+    display: flex;
+    justify-content: center;
+
+    main {
+        display: flex;
+        overflow: auto;
+        width: 1200px;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    .hover__main {
+        color: white;
+        width: 250px;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 250px;
+            height: 300px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+        }
+
+        header {
+            padding: 8px 10px;
+
+            h4 {
+                color: rgba(255, 255, 255, 0.729);
+                font-weight: 500;
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .hover__main + .hover__main {
+        margin-left: 25px;
+    }
+}
