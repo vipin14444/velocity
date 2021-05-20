@@ -1,0 +1,19 @@
+.container-1 {
+    max-width: 600px;
+    background-color: darkcyan;
+
+    .flex {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        background-color: cornflowerblue;
+        width: 100%;
+
+        .text {
+            background-color: coral;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}

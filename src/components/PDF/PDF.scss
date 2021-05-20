@@ -1,0 +1,49 @@
+.pdf-area {
+    // background-color: crimson;
+    height: 297mm;
+    width: 210mm;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    > div > div {
+        background-color: magenta;
+    }
+
+    .first {
+        background-color: yellow;
+        width: 100%;
+        height: 100%;
+    }
+
+    .second {
+        background-color: cadetblue;
+        width: 100%;
+        height: 100%;
+    }
+
+    .third {
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        .data {
+            margin-top: auto;
+        }
+    }
+
+    .fourth {
+        background-color: lime;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        .data {
+            margin-top: auto;
+        }
+    }
+}

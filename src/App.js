@@ -7,6 +7,18 @@ import Booking from './components/Booking';
 import SwitchCard from './components/SwitchCard/SwitchCard';
 import HoverCard from './components/HoverCard/HoverCard';
 import CombinedView from './components/CombinedView/CombinedView';
+import SocialLogin from './components/SocialLogin/SocialLogin';
+import AccordionList from './components/ZenAccordionList/AccordionList'
+import Accordion from './components/ZenAccordionList/Accordion';
+import FunctionalComponent from './components/FunctionalComponents/FunctionalComponent';
+import Adscouter from './components/Adscouter/Adscouter';
+import PDF from './components/PDF/PDF';
+import ThemeSwitchContainer from './components/ThemeSwitch/ThemeSwitchContainer';
+import Fashion from './pages/fashion/Fashion';
+import NestedListContainer from './pages/nestedlist/NestedListContainer';
+import Ellipsis from './pages/ellipsis/Ellipsis';
+import MyToastComponent from './pages/MyToastComponent/MyToastComponent';
+import ZenToast from './components/Toast/ZenToast';
 
 const columns = [
 	{
@@ -99,12 +111,32 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Switch>
+					<Route path='/accordion' render={(props) => {
+						return (
+							<AccordionList>
+								<Accordion />
+							</AccordionList>
+						)
+					}} />
+					<Route path='/social' component={SocialLogin}></Route>
 					<Route path='/switch' component={SwitchCard}></Route>
 					<Route path='/hover' component={HoverCard}></Route>
 					<Route path='/combined' component={CombinedView}></Route>
+					<Route path='/functional' component={FunctionalComponent}></Route>
+					<Route path='/ad' component={Adscouter}></Route>
 					<Route path='/booking' render={(props) => <Booking {...props}></Booking>}></Route>
+					<Route path='/pdf' render={(props) => <PDF {...props}></PDF>}></Route>
+					<Route path='/theme' render={(props) => <ThemeSwitchContainer {...props}></ThemeSwitchContainer>}></Route>
+					<Route path='/nest' component={NestedListContainer} />
+
+					<Route path='/fashion' component={Fashion} />
+					<Route path='/ellipsis' component={Ellipsis} />
+
+					<Route path='/toast' component={MyToastComponent} />
 				</Switch>
 			</BrowserRouter>
+
+			<ZenToast />
 		</div>
 	);
 }
